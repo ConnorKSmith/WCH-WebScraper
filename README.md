@@ -5,7 +5,9 @@ Simple webscraper created using Node.js and jQuery (Cheerio)
 -- can be ran using npm with cheerio, request and URL dependencies
 
 Example output from September 18th, 2016: 
+
 /*
+
 Team Sweden lost to Team Finland by a score of 3 to 2.
 
 Team Russia lost to Team Russia by a score of 4 to 3.
@@ -35,4 +37,5 @@ Team USA lost to Team Europe by a score of 3 to 0.
 Team Russia lost to Team Canada by a score of 6 to 0.
 
 Team Russia lost to Team Sweden by a score of 2 to 1.
+
 */
