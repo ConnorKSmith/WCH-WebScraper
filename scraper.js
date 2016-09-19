@@ -25,7 +25,7 @@ request("https://www.wch2016.com/scores-schedule", function(error, response, bod
       var team2 = $(this).find('span.team.winner');
       var winner, loser;
 
-      //Trim String returned to seperate score and team and remove comma
+      //Trim string (of the form SWE 3 or SWE 3,) returned to seperate score and team and remove comma
       winner = team2.text().substr(0,5);
       wscore = winner.substr(4,4);
       loser = team1.text().substr(0,5);
