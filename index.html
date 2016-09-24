@@ -7,7 +7,9 @@
   <script src="scraper.js"></script>
 </head>
 <body>
+	<p id = "findme"></p>
 </body>
+<script>
 var request = require('request');
 var cheerio = require('cheerio');
 var URL = require('url-parse'); 
@@ -42,6 +44,7 @@ request("https://www.wch2016.com/scores-schedule", function(error, response, bod
       lscore = loser.substr(4,4);
       
       //Print to console after finding the correct team for each winner and loser
+      document.getElementById("findme").innerHTML = findTeam(winner);
       console.log(findTeam(loser) + " lost to " + findTeam(winner) + " by a score of " + wscore + " to " + lscore + ".");
     });
 
@@ -75,4 +78,5 @@ function findTeam($){
 	else return $;
 
 }
+</script>
 </html>
