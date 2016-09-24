@@ -30,7 +30,7 @@ request("https://www.wch2016.com/scores-schedule", function(error, response, bod
       wscore = winner.substr(4,4);
       loser = team1.text().substr(0,5);
       lscore = loser.substr(4,4);
-      document.getElementById("findme").innerHTML = findTeam(winner);
+      
       //Print to console after finding the correct team for each winner and loser
       console.log(findTeam(loser) + " lost to " + findTeam(winner) + " by a score of " + wscore + " to " + lscore + ".");
     });
