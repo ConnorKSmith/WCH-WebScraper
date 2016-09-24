@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="id01"></div>
+
+<script>
+
 var request = require('request');
 var cheerio = require('cheerio');
 var URL = require('url-parse'); 
@@ -16,7 +24,8 @@ request("https://www.wch2016.com/scores-schedule", function(error, response, bod
   var $ = cheerio.load(body);
 
   // Search HTML to find "div.wide-time-result" (one for each completed game)
-  $('div.wide-time-result').each(function(i, element){
+  
+$('div.wide-time-result').each(function(i, element){
       
       //Inside of "wide-time=result" find both winning and losing team
       var team1 = $(this).find('span.team.loser');
@@ -30,6 +39,13 @@ request("https://www.wch2016.com/scores-schedule", function(error, response, bod
       wscore = winner.substr(4,4);
       loser = team1.text().substr(0,5);
       lscore = loser.substr(4,4);
+	  
+      var out = ""; 
+      out = '<p>"' findTeam(loser) + " lost to " + findTeam(winner) + " by a score of " + wscore + " to " + lscore '</p><br>';
+	
+	
+    
+      document.getElementById("id01").innerHTML = out;
       
       //Print to console after finding the correct team for each winner and loser
       console.log(findTeam(loser) + " lost to " + findTeam(winner) + " by a score of " + wscore + " to " + lscore + ".");
@@ -65,3 +81,8 @@ function findTeam($){
 	else return $;
 
 }
+
+</script>
+
+</body>
+</html>
