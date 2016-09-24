@@ -1,7 +1,7 @@
 # WCH-WebScraper
-Webscraper created using Node.js and jQuery (Cheerio) 
+Web scraper created using Node.js and jQuery (Cheerio) 
 
--- This webscraper grabs the scores of all completed World Cup of Hockey matches
+-- This web scraper grabs the scores of all completed World Cup of Hockey matches
 -- can be ran using npm with cheerio, request and URL dependencies
 
 Example output from September 18th, 2016: 
